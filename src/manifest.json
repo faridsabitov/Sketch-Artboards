@@ -3,15 +3,27 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
+      "name": "ArrangeArtboardsInColumns",
       "identifier": "sketch-artboards.my-command-identifier",
-      "script": "./my-command.js"
+      "script": "main.js",
+      "handlers" : {
+        "run" : "ArrangeArtboardsInColumns"
+      }
+    },    
+    {
+      "name": "Settings",
+      "description": "Provide settings for the plugin",
+      "identifier": "settings",
+      "script": "./settings.js",
+      "icon": "icon.png",
+      "handler": "settings"
     }
   ],
   "menu": {
-    "title": "Sketch-Artboards",
+    "title": "🗂 Artboards Manager",
     "items": [
-      "sketch-artboards.my-command-identifier"
+      "sketch-artboards.my-command-identifier",
+      "settings"
     ]
   }
 }
